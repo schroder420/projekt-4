@@ -402,3 +402,93 @@ p{ line-height:1.6; }
 }
 .footer a{ opacity:0.9; }
 .footer a:hover{ opacity:1; }
+
+
+
+/* MOBILE FIRST FAQ --------------------------- */
+
+/* Hele FAQ-blokken har runde hjørner */
+.faq-item {
+    background: #F5F5F5;
+    border-radius: 25px;
+    margin-bottom: 18px;
+    overflow: hidden;
+    padding: 10px;
+}
+
+/* Spørgsmålet */
+.faq-question {
+    width: 100%;
+    border: none;
+    background: none;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Pil */
+.arrow {
+    transition: transform 0.3s ease;
+}
+
+.faq-item.open .arrow {
+    transform: rotate(90deg);
+}
+
+/* Svar-sektionen */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 7px;
+    background: #F5F5F5;
+    transition: max-height 0.3s ease;
+}
+
+.faq-answer p {
+    padding: 12px 0 16px;
+    margin: 0;
+    font-size: 14px;
+    color: black;
+}
+
+/* Åben tilstand */
+.faq-item.open .faq-answer {
+    max-height: 300px;
+}
+
+.faq-item.open .faq-question {
+    font-weight: 700;
+}
+
+/* Sektion (mobilversion) */
+.faq-section {
+    background-color: #1A1A1A;
+    color: #F5F5F5;
+    padding: 20px; /* luft fra kanten på mobil */
+    transition: font-weight 0.2s ease;
+}
+
+/* DESKTOP FAQ --------------------------- */
+@media (min-width: 768px) {
+
+    .faq-section {
+        margin: 40px auto;
+        padding: 20px;
+    }
+
+    .faq-question {
+        padding: 5px;
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        padding: 0 6px;
+    }
+
+    .faq-answer p {
+        font-size: 15px;
+    }
+
+}
