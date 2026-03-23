@@ -1,15 +1,22 @@
+<!-- =========================
+     index.html (COPY/PASTE)
+========================= -->
 <!doctype html>
 <html lang="da">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>GAME – Landing</title>
+
   <link rel="stylesheet" href="style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
 </head>
 
 <body>
-  <!-- HEADER / NAV -->
-  <header>
+  <header class="site-header" id="top">
 PLACEHOLDER MENU
   </header>
 
@@ -21,72 +28,63 @@ PLACEHOLDER MENU
     <div class="container hero-inner">
       <h1 class="hero-title">UNGE DER VOKSER – BYRUM DER LEVER</h1>
       <p class="hero-sub">
-        GAME skaber trygge steder for unge og gerne… (placeholder tekst)
-      </p>
-      <a class="btn btn-primary" href="#vaer-med">Bliv en del (placeholder)</a>
+      GAME skaber muligheder for unge gennem gadeidræt og streetkultur – og sammen med lokale fællesskaber er vi med til at gøre byens rum levende, trygge og fulde af energi.”      </p>
+      <a class="btn btn-primary" href="#vaer-med">Tilmeld dig som frivillig</a>
     </div>
   </section>
 
-  <!-- WHO IS GAME -->
+  <!-- HVEM ER GAME -->
   <section class="section" id="hvem-er-game">
     <div class="container who-grid">
-      <div class="who-img">
-        <img src="billeder/hvem.png" alt="Placeholder billede" />
+      <div class="who-photo">
+        <img src="billeder/hvem.png" alt="Billede af GAME (placeholder)" />
       </div>
 
       <div class="who-card">
-        <div class="who-card-frame" aria-hidden="true"></div>
         <h2>Hvem er GAME?</h2>
         <p>
-          GAME arbejder for at skabe stærke fællesskaber gennem streetkultur…
-          (placeholder tekst)
+        GAME arbejder for at skabe stærke fællesskaber gennem streetkultur. Vi uddanner unge som Playmakere og åbner døre til trygge, gratis aktiviteter i nærmiljøet – drevet af fællesskab, frivillighed og et ønske om at give alle unge en fair chance.
         </p>
-        <a class="btn btn-ghost" href="#">Se vores impact</a>
+        <a class="btn btn-primary btn-small" href="#">Se vores impact</a>
       </div>
     </div>
   </section>
 
-  <!-- BLUE SECTION -->
+  <!-- BLÅ SEKTION -->
   <section class="section section-blue" id="vaer-med">
     <div class="container blue-grid">
       <div class="blue-left">
         <h2>Her kan du være med</h2>
         <p>
-          Vil du gøre en forskel og møde nye mennesker? Find GAME i din by og se,
-          hvordan du kan være med. (placeholder)
+        Vil du gøre en forskel og møde nye mennesker?Find GAME i din by og se, hvordan du kan være med. Start som frivillig – hurtigt og enkelt.
         </p>
-        <a class="btn btn-light" href="#">Find din by</a>
 
-        <!-- watermark -->
-        <div class="blue-watermark" aria-hidden="true">Game</div>
+        <a class="btn btn-light btn-small" href="#">Find din by</a>
+        <img src="gamelogowhite.svg" class="blue-watermark" aria-hidden="true"></img>
       </div>
 
       <div class="blue-right">
-        <img src="billeder/med.png" alt="Placeholder billede" />
+        <img class="blue-img" src="billeder/med.png" alt="Aktivitetsbillede (placeholder)" />
       </div>
     </div>
   </section>
 
-  <!-- NEWS + SLIDER -->
+  <!-- NYHEDER + GALLERI -->
   <section class="section" id="nyheder">
-    <div class="container news-grid">
-      <div class="news-left">
-        <div class="kicker">NYT</div>
-        <h2>Bliv en del af GAME’s Urban Music School</h2>
-        <p>
-          Urban Music School er stedet, hvor GAME skruer op for kreativiteten…
-          (placeholder)
-        </p>
-        <a class="btn btn-primary" href="#">Læs mere (placeholder)</a>
-      </div>
-
-      <div>
+      <div class="container news-grid">
+        <div class="news-left">
+          <div class="kicker">NYT</div>
+          <h2>Bliv en del af GAME’s Urban Music School</h2>
+          <p>
+          Urban Music School er stedet, hvor GAME skruer op for kreativiteten. Hvis du er 16–30 år, kan du dykke ned i DJ’ing, beatmaking eller rap – og udvikle dit talent sammen med andre unge.
+          </p>
+          <a class="btn btn-primary" href="#">Læs mere om Urban Music School</a>
+        </div>
+        
+    <div>
         PLACEHOLDER GALLERI
-      </div>
-    
     </div>
   </section>
-
 
   <footer class="footer">
     <div class="container footer-inner">
@@ -94,6 +92,7 @@ PLACEHOLDER MENU
       <a href="#top">Til toppen</a>
     </div>
   </footer>
+
 
 </body>
 </html>
