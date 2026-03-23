@@ -1,0 +1,605 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3{
+  font-family: 'Oswald', sans-serif;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Menu */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #121619;
+  z-index: 1000;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Hver nav punkt */
+.nav-links {
+  margin-left: auto;
+  display: flex;
+  gap: 40px;
+}
+
+/* Nav logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Selve billedet */
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+  opacity: 1;
+}
+
+/* Hero sektion */
+.hero {
+  position: relative;
+  height: 90vh;
+  background: url('hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(20, 20, 20, 0.65),
+    rgba(40, 20, 20, 0.55)
+  );
+}
+
+/* Indhold i hero */
+.hero-content {
+  position: relative;
+  max-width: 700px;
+  padding: 20px;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 64px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 18px;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 30px;
+}
+
+/* CTA knap */
+.cta {
+  display: inline-block;
+  background: #F7595E;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* Impact sektion */
+.impact {
+  padding: 80px 20px;
+  background: transparent;
+}
+
+/* Impact wrapper */
+.impact-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Impact grid */
+.impact-inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 500px;
+  overflow: hidden;
+  background: #2f4e9b; /* ← flyttet herind */
+}
+
+/* Impact billede */
+.impact-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Impact text */
+.impact-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 80px;
+  color: white;
+}
+
+/* Forskellige roller sektion */
+.roles-section {
+  padding: 100px 0;
+}
+
+/* Roller grid */
+.roles-grid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 80px;
+}
+
+/* Roller venstre side */
+.roles-left h2 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+.roles-left p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+
+.roles-left .cta {
+  margin-top: 10px;
+}
+
+/* Roller røjre boks */
+.roles-right {
+  background: rgba(82, 122, 242, 0.25);
+  padding: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px 60px;
+}
+
+/* Rollerne */
+.role h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #214B91;
+}
+
+.role p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  color: #214B91;
+}
+
+.steps-section {
+  padding: 100px 0;
+}
+
+.steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+}
+
+.steps-left {
+  position: relative;
+  overflow: hidden;
+}
+
+.steps-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.steps-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 50px;
+  color: white;
+
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.steps-overlay h2 {
+  font-size: 44px;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.steps-overlay .lead {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.steps-overlay p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.steps-overlay .cta {
+  margin-top: 10px;
+}
+
+.steps-right {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.step {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.step-number {
+  font-size: 64px;
+  line-height: 1;
+  color: transparent;
+  -webkit-text-stroke: 2px #ff5a5f;
+}
+
+.step h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.step p {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.locations-section {
+  padding: 100px 0;
+}
+
+.locations-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.locations-left h2 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: 15px;
+}
+
+.locations-left p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+.map img {
+  width: 100%;
+  max-width: 500px;
+}
+
+.locations-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  position: relative;
+}
+
+.locations-info {
+  background: #214B91;
+  color: white;
+  padding: 40px;
+  z-index: 2;
+}
+
+.locations-info h3 {
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  margin-bottom: 20px;
+}
+
+.locations-info ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.locations-info li {
+  margin-bottom: 10px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.locations-text p {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.locations-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.form-section {
+  padding: 100px 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.form-left h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 52px;
+  color: #F7595E;
+  margin-bottom: 20px;
+}
+
+.form-left p {
+  font-family: 'Manrope', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.form-card {
+  background: white;
+  padding: 40px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.2);
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Labels */
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+/* Inputs */
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  background: #ddd;
+  font-size: 14px;
+  font-family: 'Manrope', sans-serif;
+}
+
+.form-card .cta {
+  margin-top: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.footer {
+  position: relative;
+  height: 450px;
+  background: url("../asphalt.jpg") center/cover no-repeat;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+}
+
+.footer-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1300px;
+
+  margin: 0 auto;
+  padding: 0 20px 50px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Footer logo */
+.footer-logo {
+  height: 70px;
+  margin-bottom: 20px;
+}
+
+.stroke-text {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 2px #ff5a5f;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+.faq {
+  background: #1A1A1A;
+  padding: 80px 0;
+}
+
+.white {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    height: 350px;
+  }
+
+  .footer-content {
+    padding-bottom: 30px;
+  }
+
+  .footer-logo {
+    height: 50px;
+  }
+
+  .subtitle {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .impact-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-content {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .roles-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .roles-right {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .locations-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .locations-right {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .form-card {
+    padding: 25px;
+  }
+}
+
+@media (max-width: 768px) {
+  .faq-hero {
+    height: 300px;
+  }
+
+  .faq-tagline {
+    font-size: 22px;
+  }
+}
+
