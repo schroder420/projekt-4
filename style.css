@@ -452,6 +452,76 @@ p{ margin:0; line-height:1.6; }
 }
 .btn-ghost:hover{ border-color: rgba(26,26,26,0.40); }
 
+body {
+   margin: 0;
+   font-family: Arial, sans-serif;
+   background: #fafafa;
+}
+
+
+header {
+   padding: 1rem;
+   background: #fff3cd;
+   border-bottom: 1px solid #ddd;
+}
+
+
+/* ===== MOBILE FIRST ===== */
+/* 1 billede ad gangen + centreret */
+.gallery {
+   display: grid;
+   grid-template-columns: 1fr; /* ét billede */
+   gap: 1rem;
+   padding: 1rem;
+   justify-items: center; /* centrerer billederne */
+   background-color: #f5f5f5;
+}
+
+
+.gallery__item img {
+   width: 100%;        /* gør billedet fleksibelt på mobil */
+   max-width: 400px;   /* men må gerne være 400px på større skærme */
+   height: 400px;
+   object-fit: cover;
+}
+
+
+/* Pile */
+.arrow {
+   position: fixed;
+   top: 50%;
+   transform: translateY(-50%);
+   background: #00000088;
+   color: white;
+   border: none;
+   font-size: 2rem;
+   padding: 0.5rem 1rem;
+   cursor: pointer;
+   z-index: 10;
+   border-radius: 6px;
+}
+
+
+.arrow--left {
+   left: 10px;
+}
+
+
+.arrow--right {
+   right: 10px;
+}
+
+
+/* ===== DESKTOP ===== */
+/* 3 billeder i række + centreret */
+@media (min-width: 768px) {
+   .gallery {
+       grid-template-columns: repeat(3, 1fr);
+       justify-items: center;
+   }
+}
+
+
 /* ---------- FOOTER ---------- */
 .footer{
   background: var(--text);
