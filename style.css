@@ -494,11 +494,10 @@ header {
     position: absolute; /* ikke fixed */
     top: 50%;
     transform: translateY(-50%);
-    background: #00000088;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
+    background-color: #F5F5F5;
     font-size: 2rem;
-    padding: 0.5rem 1rem;
     cursor: pointer;
     z-index: 5;
     border-radius: 6px;
@@ -514,14 +513,22 @@ header {
    right: 10px;
 }
 
-
-/* ===== DESKTOP ===== */
-/* 3 billeder i række + centreret */
 @media (min-width: 768px) {
    .gallery {
        grid-template-columns: repeat(3, 1fr);
        justify-items: center;
+       padding: 0 200px; /* 👈 giver luft i siderne */
+       padding-top: 50px;
+       padding-bottom: 50px;
    }
+   .arrow--left {
+   left: 100px;
+}
+
+
+.arrow--right {
+   right: 100px;
+}
 }
 
 
