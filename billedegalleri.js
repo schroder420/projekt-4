@@ -105,3 +105,16 @@ function prevImages() {
 
    renderGallery();
 }
+// Init
+updateImagesPerPage();
+renderGallery();
+
+// Klik-events
+nextBtn.addEventListener("click", nextImages);
+prevBtn.addEventListener("click", prevImages);
+
+// Opdater ved resize
+window.addEventListener("resize", () => {
+    updateImagesPerPage();
+    renderGallery();
+});

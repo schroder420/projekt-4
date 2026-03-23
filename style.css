@@ -486,19 +486,22 @@ header {
 }
 
 
-/* Pile */
+.gallery-section {
+    position: relative; /* vigtigt! – pile placeres relativt til galleriet */
+}
+
 .arrow {
-   position: fixed;
-   top: 50%;
-   transform: translateY(-50%);
-   background: #00000088;
-   color: white;
-   border: none;
-   font-size: 2rem;
-   padding: 0.5rem 1rem;
-   cursor: pointer;
-   z-index: 10;
-   border-radius: 6px;
+    position: absolute; /* ikke fixed */
+    top: 50%;
+    transform: translateY(-50%);
+    background: #00000088;
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    z-index: 5;
+    border-radius: 6px;
 }
 
 
