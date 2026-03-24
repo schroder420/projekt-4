@@ -171,6 +171,17 @@ img {
   min-height: 500px;
   overflow: hidden;
   background: #2f4e9b; /* ← flyttet herind */
+  position: relative; 
+  
+}
+
+.impact-inner::before {
+  content: "";
+  position: absolute;
+  inset: 15px; 
+  border: 3px solid #527AF2; 
+  pointer-events: none; 
+  z-index: 5;
 }
 
 /* Impact billede */
