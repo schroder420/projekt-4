@@ -1,9 +1,7 @@
-  // Variabler
-  const burger = document.getElementById("burger");
-  const menu = document.getElementById("navMenu");
-  const links = document.querySelectorAll(".nav-link");
+const burger = document.getElementById("burger");
+const menu = document.getElementById("navMenu");
+const links = document.querySelectorAll(".nav-link");
 
-  // Burger klik
   burger.addEventListener("click", function () {
     menu.classList.toggle("active");
   });

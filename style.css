@@ -60,81 +60,6 @@ p{ margin:0; line-height:1.6; }
   .container{ padding-inline: var(--pad-mobile); }
 }
 
-/* ---------- HEADER ---------- */
-.site-header{
-  background: rgba(26,26,26,0.92);
-  color: var(--white);
-  position: relative;
-  z-index: 50;
-}
-.header-inner{
-  height: var(--nav-height);
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap: var(--s3);
-}
-.brand-mark{
-  width: 44px;
-  height: 24px;
-  border-radius: 6px;
-  background: rgba(255,255,255,0.14);
-  display:inline-block;
-}
-.nav{
-  display:flex;
-  align-items:center;
-  gap: var(--nav-gap);
-}
-.nav-link{
-  font-family: "Oswald", "Inter", sans-serif;
-  font-size: 14px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.92;
-  padding: 10px 0;
-}
-.nav-link:hover{ opacity:1; }
-
-.burger{
-  display:none;
-  width:48px; height:48px;
-  border:0;
-  background:transparent;
-  cursor:pointer;
-}
-.burger span{
-  display:block;
-  height:2px;
-  background: var(--white);
-  margin:7px 0;
-  border-radius:999px;
-}
-
-/* Mobilmenu – JS toggler .is-open */
-@media (max-width: 900px){
-  .burger{ display:block; }
-
-  .nav{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: var(--nav-height);
-    background: rgba(26,26,26,0.96);
-    padding: var(--s4) var(--pad-tablet);
-    display:none;
-    flex-direction:column;
-    align-items:flex-start;
-    gap: var(--s2);
-    border-top: 1px solid rgba(255,255,255,0.12);
-  }
-  .nav.is-open{ display:flex; }
-  .nav-link{ width:100%; padding:12px 0; }
-}
-@media (max-width: 560px){
-  .nav{ padding-inline: var(--pad-mobile); }
-}
-
 /* ---------- HERO ---------- */
 .hero{
   position:relative;
@@ -459,13 +384,6 @@ body {
 }
 
 
-header {
-   padding: 1rem;
-   background: #fff3cd;
-   border-bottom: 1px solid #ddd;
-}
-
-
 /* ===== MOBILE FIRST ===== */
 /* 1 billede ad gangen + centreret */
 .gallery {
@@ -549,5 +467,96 @@ header {
 .footer a{ opacity:0.9; }
 .footer a:hover{ opacity:1; }
 
+/* Menu */
+.navbar {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: #121619;
+  z-index: 1000;
+}
 
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 22px 20px;
+
+  display: flex;
+  align-items: center;
+}
+
+/* Hver nav punkt */
+.nav-links {
+  display: flex;
+  justify-content: space-between;
+  margin-left: auto;
+  display: flex;
+  gap: 40px;
+}
+
+/* Nav logo */
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+/* Selve billedet */
+.logo img {
+  height: 60px;
+  width: auto;
+  display: block;
+}
+
+.navbar a {
+  color: #fff;
+  text-decoration: none;
+  font-family: 'Oswald', sans-serif;;
+  font-weight: bold;
+  letter-spacing: 1px;
+  font-size: 18px;
+  text-transform: uppercase;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.navbar a:hover {
+  color: #F7595E
+}
+
+/* Burger hidden på desktop */
+.burger {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  /* Burger */
+  .burger {
+    display: block;
+    margin-left: auto;
+  }
+
+  /* NAV */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    width: 100%;
+    background: #121619;
+
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+}
 
