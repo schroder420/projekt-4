@@ -67,15 +67,73 @@
   </div>
 </section>
 
-<!-- Cards sektio -->
+<!-- Cards sektion -->
 <section class="cards">
-  <div class="container"> <!-- Container sørger for margin og padding på hele sektionen -->
+  <div class="container">
+
     <div class="cards-content">
-      <h2>
-        Hvorfor være frivillig i GAME?
-      </h2>
-  </div>
+      <h2>Hvorfor være frivillig i GAME?</h2>
+      <p class="cards-intro">
+        I GAME tror vi på unge-lederskab, empowerment og fællesskaber der løfter.
+      </p>
     </div>
+
+    <div class="cards-grid">
+
+      <div class="card">
+        <img src="billeder/1.webp" alt="front af et GAME hub">
+        <div class="card-text">
+          <h3>Du styrker børn og unge</h3>
+          <p class="short">
+            Kom tæt på fællesskaber hvor der er brug for rollemodeller.
+          </p>
+          <p class="extra">
+            Dine træninger og aktiviteter er med til at skabe plads, selvtillid og handlekraft hos børn og unge i deres hverdag.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="billeder/2.webp" alt="børn i en cirkel">
+        <div class="card-text">
+          <h3>Du bliver en del af et stærkt fællesskab</h3>
+          <p class="short">
+            Bliv en del af et ungt frivilligmiljø.
+          </p>
+          <p class="extra">
+            Hver uge skaber frivillige trygge miljøer for tusindvis af børn og unge. Du bliver en del af et fællesskab der løfter sammen.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="billeder/3.webp" alt="playmakers som hepper på barn">
+        <div class="card-text">
+          <h3>Du får træning og ansvar</h3>
+          <p class="short">
+            Lær at tage ansvar og lede aktiviteter.
+          </p>
+          <p class="extra">
+            Du får oplæring i GAME’s metoder og udvikler kompetencer inden for kommunikation, planlægning og samarbejde.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="billeder/4.webp" alt="Playmakers i en ring">
+        <div class="card-text">
+          <h3>Et sted hvor du gør en reel forskel</h3>
+          <p class="short">
+            Gør en forskel dér hvor det mærkes.
+          </p>
+          <p class="extra">
+            Du arbejder lokalt med børn og unge og er med til at skabe trygge fællesskaber i deres hverdag.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </section>
 
 <section class="roles-section">
@@ -279,41 +337,50 @@
 
     <!-- Højre -->
     <div class="form-card" id="tilmeld">
-      <form>
+      <form id="volunteerForm">
 
         <div class="form-row">
           <div class="form-group">
-            <label>Fornavn</label>
-            <input type="text" placeholder="Placeholder">
+            <label for="firstName">Fornavn</label>
+            <input type="text" id="firstName" placeholder="Skriv dit fornavn">
           </div>
 
           <div class="form-group">
-            <label>Efternavn</label>
-            <input type="text" placeholder="Placeholder">
+            <label for="lastName">Efternavn</label>
+            <input type="text" id="lastName" placeholder="Skriv dit efternavn">
           </div>
         </div>
 
         <div class="form-group">
-          <label>Alder</label>
-          <input type="text" placeholder="Placeholder">
+          <label for="age">Alder</label>
+          <input type="number" id="age" placeholder="Skriv din alder">
         </div>
 
         <div class="form-group">
-          <label>Hvilken by vil du være frivillig i?</label>
-          <select>
-            <option>Placeholder</option>
+          <label for="city">Hvilken by vil du være frivillig i?</label>
+          <select id="city">
+            <option value="">Vælg en by</option>
+            <option value="København">København</option>
+            <option value="Odense">Odense</option>
+            <option value="Aarhus">Aarhus</option>
+            <option value="Esbjerg">Esbjerg</option>
           </select>
         </div>
 
         <div class="form-group">
-          <label>Hvilken rolle ønsker du?</label>
-          <select>
-            <option>Placeholder</option>
+          <label for="role">Hvilken rolle ønsker du?</label>
+          <select id="role">
+            <option value="">Vælg en rolle</option>
+            <option value="Playmaker - Street sport & kultur">Playmaker - Street sport & kultur</option>
+            <option value="Frivillig i et GAME House">Frivillig i et GAME House</option>
+            <option value="Playmaker - Events">Playmaker - Events</option>
+            <option value="Girl Zone-frivillig">Girl Zone-frivillig</option>
           </select>
         </div>
 
         <button type="submit" class="cta">Send tilmelding →</button>
 
+        <p id="formMessage"></p>
       </form>
     </div>
 
@@ -414,6 +481,8 @@
 </section>
 
 <script src="faq.js"></script>
+<script src="form.js"></script>
+<script src="cards.js"></script>
 
 
 </body>

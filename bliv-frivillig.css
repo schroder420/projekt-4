@@ -701,6 +701,56 @@ img {
   }
 }
 
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 40px;
+}
+
+.card {
+  background: #f2f2f2;
+  cursor: pointer;
+  transition: 0.3s;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-text {
+  padding: 20px;
+}
+
+.card h3 {
+  font-family: 'Oswald', sans-serif;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-family: 'Manrope', sans-serif;
+  line-height: 1.5;
+}
+
+/* skjult tekst */
+.card .extra {
+  display: none;
+}
+
+/* aktiv state */
+.card.active .extra {
+  display: block;
+  margin-top: 10px;
+}
+
+.card.active {
+  background: #e6e6e6;
+  transform: scale(1.02);
+}
+
 @media (max-width: 768px) {
   .faq-hero {
     height: 300px;
